@@ -23,16 +23,16 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 		0.0, 1.0, //Vert 4 
 	};
 	this.colors = {
-		values : new Float32Array([ ... ]),
+		values : new Float32Array([ 1.0, 0.0, 0.0 ]),
 		numComponets : 3
 	};
 					   
     	this.indices = {
         // Add here
-		
+		0, 1, 3, 2
    	 };
 	
-	// positions
+	// positions buffer
 	
 	this.positions.buffer = gl.createBuffer();
 	gl.bindBuffer( gl.ARRAY_BUFFER, this.positions.buffer );
@@ -40,14 +40,14 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 	this.positions.attributeLoc = gl.getAttribLocation( this.program, "vPosition" );
 	gl.enableVertexAttribArray( this.positions.attributeLoc );
 
-	// colors
+	// colors buffer
     this.colors.buffer = gl.createBuffer();
     gl.bindBuffer( gl.ARRAY_BUFFER, this.colors.buffer );
     gl.bufferData( gl.ARRAY_BUFFER, this.colors.values, gl.STATIC_DRAW );
     this.colors.attributeLoc = gl.getAttribLocation( this.program, "vColor" );
     gl.enableVertexAttribArray( this.colors.attributeLoc );
     
-	// indices
+	// indices buffer
     this.indices.buffer = gl.createBuffer();
     gl.bindBuffer( gl.ELEMENT_ARRAY_BUFFER, this.indices.buffer );
     gl.bufferData( gl.ELEMENT_ARRAY_BUFFER, this.indices.values, gl.STATIC_DRAW );
