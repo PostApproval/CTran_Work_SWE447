@@ -17,12 +17,20 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 
 	this.positions = {
 	    // Add here
+		0.0, 0.0, //Vert 1
+		1.0, 0.0, //Vert 2
+		1.0, 1.0, //Vert 3
+		0.0, 1.0, //Vert 4 
 	};
 	this.colors = {
+		values : new Float32Array([ ... ]),
+		numComponets : 3
 	};
-    this.indices = {
+					   
+    	this.indices = {
         // Add here
-    };
+		
+   	 };
 	
 	// positions
 	
