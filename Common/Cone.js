@@ -1,6 +1,6 @@
-const DefaultNumSides = 8;
+const DefaultNumSides = 8; // for example 8 is default if none is defined
 
-function Cone( gl, numSides, vertexShaderId, fragmentShaderId ) {
+function Cone( gl, numSides, vertexShaderId, fragmentShaderId ) {  //declares attributes for the rendered cone, if none are defined it goes with default values
 
     // Initialize the shader pipeline for this object using either shader ids
     //   declared in the application's HTML header, or use the default names.
