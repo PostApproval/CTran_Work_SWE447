@@ -20,40 +20,41 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         values : new Float32Array([
            // Add your list vertex positions here
    // Front face
+    // Front face
    0.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+   0.5,  0.0,  0.0,
+   0.5,  0.5,  0.0,
+   0.0,  0.5,  0.0,
   
   // Back face
-   1.0,  0.0, 0.0,
-   1.0,  1.0, 0.0,
-   1.0,  1.0, 1.0,
-   1.0,  0.0, 1.0,
+   0.5,  0.0, 0.0,
+   0.5,  0.5, 0.0,
+   0.5,  0.5, 0.5,
+   0.5,  0.0, 0.5,
   
   // Top face
-   1.0,  0.0,  0.5,
+   0.5,  0.0,  0.5,
    0.0,  0.0,  0.5,
-   0.0,  1.0,  1.0,
-   1.0,  1.0,  1.0,
+   0.0,  0.5,  0.5,
+   0.5,  0.5,  0.5,
   
   // Bottom face
-   0.0,  0.0,  1.0,
+   0.0,  0.0,  0.5,
    0.0,  0.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  1.0,
+   0.0,  0.5,  0.0,
+   0.0,  0.5,  0.5,
   
   // Right face
-   0.0,  1.0,  0.0,
-   1.0,  1.0,  0.0,
-   1.0,  1.0,  1.0,
-   0.0,  1.0,  1.0,
+   0.0,  0.5,  0.0,
+   0.5,  0.5,  0.0,
+   0.5,  0.5,  0.5,
+   0.0,  0.5,  0.5,
   
   // Left face
-   0.0,  0.0,  1.0,
-   1.0,  0.0,  1.0,
+   0.0,  0.0,  0.5,
+   0.5,  0.0,  0.5,
    0.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+   0.5,  0.0,  0.0,
    ]),
         numComponents : 3
     };
@@ -63,29 +64,29 @@ function Cube( vertexShaderId, fragmentShaderId ) {
             // Add your list of triangle indices here
 			
       0,  1,  3,      
-	  3,  1,  2,    // front
+      3,  1,  2,    // front
 	  
       7,  5,  4,
       6,  5,  7,	// back
 	  
       8,  9,  11,
-	  11,  9, 10,   // top
+      11,  9, 10,   // top
 	  
-	  12, 13, 15,
-	  15, 13, 14,   // bottom
+      12, 13, 15,
+      15, 13, 14,   // bottom
 	  
       16, 17, 19,
-	  19, 17, 18,   // right
+      19, 17, 18,   // right
 	  
       20, 21, 22,
-	  22, 21, 23,   // left
+      22, 21, 23,   // left
     ])
         
     };
 
-	this.color = { 
-        values : new Float32Array([
-           // Add your list vertex positions here
+   this.color = { 
+       values : new Float32Array([
+    // Add your list vertex positions here
    // Front face
    1.0,  0.0,  0.0, 1.0,
    1.0,  0.0,  0.0, 1.0,
