@@ -20,9 +20,10 @@ uniform mat4 MV;
 
 void main()
 {
-    fColor = vec4(vColor);
+    
     gl_PointSize = 5.0;
     gl_Position = P * MV * vPosition;
+    fColor = vec4(vColor,1.0);
 }
 </script>
 
