@@ -18,7 +18,7 @@ function init() {
 
   cube = new Cube();
 
-  render();
+  cube.render();
 }
 
 function render() {
