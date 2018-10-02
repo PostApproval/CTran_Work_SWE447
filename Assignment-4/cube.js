@@ -18,7 +18,7 @@ function init() {
 
   cube = new Cube();
 
-  window.requestAnimationFrame(render);
+  render();
 }
 
 function render() {
