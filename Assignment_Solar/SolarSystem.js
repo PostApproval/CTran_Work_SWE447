@@ -6,13 +6,13 @@ var SolarSystem = {
     color : [ 1.0, 1.0, 0.0, 1.0 ]
   },
   Mercury : {
-    radius : 0.0553,
-    distance : 0.387,
+    radius : 1.0,
+    distance : 1,
     year : 0.241,
     color : [ 1.0, 0.0, 0.0, 1.0 ]
   },
   Venus : {
-    radius : 0.949,
+    radius : 0.9,
     distance : 0.723,
     year : 0.615,
     color : [ 1.0, 0.0, 1.0, 1.0 ]
