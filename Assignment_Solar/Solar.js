@@ -152,6 +152,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -165,6 +169,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+   ms.rotate(time / data.year, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -178,6 +186,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -190,6 +202,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -204,6 +220,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -217,6 +237,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 2]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -230,6 +254,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 2]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -243,6 +271,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 2]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -256,6 +288,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 2]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -269,6 +305,10 @@ function render() {
   data = SolarSystem[name];
   
   ms.push();
+  ms.rotate(time / data.year, [0, 0, 2]);
+  ms.translate(data.distance, 0, 0);
+  
+  
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
