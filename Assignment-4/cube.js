@@ -18,7 +18,7 @@ function init() {
 
   cube = new Cube();
 
-  cube.render();
+  render();
 }
 
 function render() {
@@ -26,7 +26,7 @@ function render() {
 
   angle += 2.0; // degrees
 
-  cube.MV = rotate( angle, [1, 0, 1] );
+  cube.MV = rotate( angle, [1, 1, 0] );
 
   cube.render();
 
