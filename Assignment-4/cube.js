@@ -1,36 +1,57 @@
+var cube = null;
+var gl = null;
 
-var cube = undefined;
-var gl = undefined;
-var angle = 0;
+//var P = undefined;  // matrix storing the projection transformation
+var near = 1.0;     // near clipping plane's distance
+var far = 10.0;     // far clipping plane's distance
+
+// Viewing transformation parameters
+var V = undefined;
+var M = undefined;
+var angle = 0.0;
+var dAngle = Math.PI / 10.0;
+
 
 function init() {
-  var canvas = document.getElementById( "webgl-canvas" );
+    var canvas = document.getElementById("webgl-canvas");
+    gl = WebGLUtils.setupWebGL(canvas);
+	
+    if ( !gl ) {
+        alert("Unable to setup WebGL");
+        return;
+    }
 
-  gl = WebGLUtils.setupWebGL( canvas );
+    gl.clearColor( 0.0, 0.0, 0.0, 1.0 );
+    //gl.clearColor( 0.8, 0.8, 0.8, 1.0 );
+    // Enable depth test
+    gl.enable(gl.DEPTH_TEST);
+    // Accept fragment if it closer to the camera than the former one
+    //gl.enable(gl.GL_LESS);
 
-  if ( !gl ) {
-    alert("Unable to setup WebGL");
-    return;
-  }
+    var w = canvas.clientWidth;
+    var h = canvas.clientHeight;
+    var fovy = 120.0; // degrees
+    var aspect = w / h;
 
-  gl.clearColor( 0.8, 0.8, 0.8, 1.0 );
-  gl.enable( gl.DEPTH_TEST );
-
-  cube = new Cube();
-
-  render();
+    cube = new Cube(gl);
+    cube.P = perspective(fovy, aspect, near, far);
+	
+    window.requestAnimationFrame(render);
 }
 
 function render() {
-  gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    V = translate(0.0, 0.0, -0.5*(near + far));
+    angle += dAngle;
+    offset = [ -3.0,  3.0, 0.0 ];
+    var axis = [ 1.0, 1.0, 1.0 ];
+    M = mult(translate(offset), rotate(angle, axis));
 
-  angle += 2.0; // degrees
 
-  cube.MV = rotate( angle, [1, 1, 0] );
+    cube.MV = mult(V, M);
 
-  cube.render();
-
-  requestAnimationFrame( render ); // schedule another call to render()
+    cube.render();
+    window.requestAnimationFrame(render);
 }
 
 window.onload = init;
