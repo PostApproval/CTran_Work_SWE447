@@ -1,4 +1,4 @@
-My final project may be a program where you are able to control different objects. I want it to be a program that can display different shapes with different textures. I want to implement an assortment of buttons that control different camera angles and rotate the scene around. I think this would be an interesting project because it would allow different types of lights and camera angles to be used.
+My final project may be a program where you are able to control different objects. I want it to be a program that can display different shapes with different textures. I want to implement an assortment of buttons that control different camera angles and rotate the scene around. I think this would be an interesting project because it would allow different types of lights and camera angles to be used. Will most likely be using three.js.
 
 Week 1: Learn how swapping between different views would work
 
